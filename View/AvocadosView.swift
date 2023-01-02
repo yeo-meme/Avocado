@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AvocadosView: View {
     
-//    @State private var pulsatenAnimation: Bool = false
+    @State private var pulsatenAnimation: Bool = false
     var body: some View {
         VStack{
             Spacer()
@@ -18,6 +18,10 @@ struct AvocadosView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 240, height: 240 , alignment: .center)
                 .shadow(color: Color("ColorBlackTransparentDark"), radius: 12, x: 0, y:8)
+                .scaleEffect(self.pulsatenAnimation ? 1 : 0.9)
+                .opacity(self.pulsatenAnimation ? 1: 0.9)
+                .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
+        
             
             VStack{
             Text("Avocados")
@@ -44,7 +48,9 @@ Creamy, green, and full of nutrients! Avocado is a powerhouse ingredient at any 
                 .aspectRatio(contentMode: .fill)
             )
         .edgesIgnoringSafeArea(.all)
-//        .onAppear()
+        .onAppear(perform: {
+            self.pulsatenAnimation.toggle()
+        })
     }
         
 }
