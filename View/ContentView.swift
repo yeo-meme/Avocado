@@ -21,7 +21,7 @@ struct ContentView: View {
                     HStack(alignment: .top, spacing: 0){
 //                        HeaderView()
                         ForEach(headers) { item in
-                            HeaderView(header : item)
+                            HeaderView(header: item)
                         }
                     }
                 }
