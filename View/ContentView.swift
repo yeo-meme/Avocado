@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    // MARK: - PROPERTIES
     
+    // MARK: - PROPERTIES
     var headers : [Header] = headerData
     var facts: [Fact] = factData
     var recipes: [Recipe] = recipesData
@@ -67,7 +67,6 @@ struct ContentView: View {
                 
                 
                 // MARK: - FOOTER
-                
                 VStack(alignment: .center,spacing: 20){
                     Text("All About Avocados")
                         .fontWeight(.bold)
