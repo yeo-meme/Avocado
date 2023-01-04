@@ -43,36 +43,45 @@ struct SettingsView: View {
                 }
                 // MARK: - SECTION #2
                 Section(header: Text("Application")) {
-                    HStack{
-                        Text("Product").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("Avocado Recipes")
+                    if enableNotification {
+                        HStack{
+                            Text("Product").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("Avocado Recipes")
+                        }
+                        HStack{
+                            Text("Compatibility").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("iPhone & iPad")
+                        }
+                        HStack{
+                            Text("Developer").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("John / Jane")
+                        }
+                        HStack{
+                            Text("Designer").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("Rebert Petras")
+                        }
+                        HStack{
+                            Text("website").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("swiftuimasterclass.com")
+                        }
+                        HStack{
+                            Text("version").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("1.0.0")
+                        }
+                    } else {
+                        HStack{
+                            Text("Personal message").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("👍 happy Coding! ")
+                        }
                     }
-                    HStack{
-                        Text("Compatibility").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("iPhone & iPad")
-                    }
-                    HStack{
-                        Text("Developer").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("John / Jane")
-                    }
-                    HStack{
-                        Text("Designer").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("Rebert Petras")
-                    }
-                    HStack{
-                        Text("website").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("swiftuimasterclass.com")
-                    }
-                    HStack{
-                        Text("version").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("1.0.0")
-                    }
+                  
                 }
             }
         }
